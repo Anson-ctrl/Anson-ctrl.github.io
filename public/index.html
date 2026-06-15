@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri-Tech Homestead</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <img src="SS.png" alt="Stanfield Springs logo" style="height: 100px; width: auto;">
+        <h1><span class="highlight">STANFIELD SPRINGS</span><br>Homestead Dashboard</h1>
+    </header>
+
+
+    <main>
+
+    <img class="hero-image" src="better.jpg" alt="Stanfield Springs">
+
+
+
+        <section class="about">
+            <h2>Welcome to the Stanfield Springs Dashboard!</h2>
+            <p>This dashboard is the main hub that supports small-scale farming operations at Stanfield Springs Homestead.
+               We track plant dates, harvest yields, and real-time weather data to generate
+               predictive insights like frost warnings and drought alerts.</p>
+        </section>
+
+        <!--Metric boxes -->
+        <div class="metrics">
+            <div class="box">
+                <h3> 🌿 Active Crops</h3>
+                <p id="cropCount">0</p>
+                <ul class="crop-list" id="cropList"></ul>
+            </div>
+            <div class="box">
+                <h3> ⚠️ Total Yield YTD</h3>
+                <p id="yieldTotal">0 lbs</p>
+            </div>
+        </div>
+
+        <!-- Forms -->
+        <div class="forms-wrapper">
+
+            <form id="cropForm">
+                <div class="form-row">
+                    <label for="cropname">Crop Name:</label>
+                    <input type="text" id="cropname" name="cropname" placeholder="ex. Apples" required>
+
+                    <label for="growthtime">Growth Time:</label>
+                    <input type="text" id="growthtime" name="growthtime" placeholder="ex. 60 days" required>
+
+                    <button type="submit">Add Crop</button>
+                </div>
+            </form>
+
+            <form id="yieldForm">
+                <div class="form-row">
+                    <label for="yieldInput">Log Yield (lbs):</label>
+                    <input type="number" id="yieldInput" name="yieldInput" placeholder="ex. 12" min="0" required>
+
+                    <button type="submit">Log Yield</button>
+                </div>
+            </form>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
