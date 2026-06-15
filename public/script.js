@@ -1,4 +1,4 @@
-// ── Fetch and render all data from server ──
+//Keep data updated by using render and fetch
 async function render() {
     try {
         const [cropsRes, yieldRes] = await Promise.all([
@@ -17,7 +17,6 @@ async function render() {
     }
 }
 
-// ── Add a new crop ──
 document.getElementById('cropForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     const name = document.getElementById('cropname').value.trim();
@@ -36,7 +35,6 @@ document.getElementById('cropForm').addEventListener('submit', async function(e)
     }
 });
 
-// ── Log yield ──
 document.getElementById('yieldForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     const amount = parseFloat(document.getElementById('yieldInput').value);
@@ -54,5 +52,4 @@ document.getElementById('yieldForm').addEventListener('submit', async function(e
     }
 });
 
-// ── Run on page load ──
 render();

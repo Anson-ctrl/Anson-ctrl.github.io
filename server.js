@@ -1,8 +1,10 @@
+//init ports and making them run at 3000
+
 const express = require('express');
 const app = express();
 const PORT = 3000;
 
-// ── Middleware ──
+// Middleware
 app.use(express.json());
 app.use(express.static('public'));
 
@@ -12,7 +14,7 @@ app.use((req, res, next) => {
     next();
 });
 
-// ── Server-side data ──
+// Server-side data
 let crops = [];
 let totalYield = 0;
 
@@ -45,7 +47,7 @@ app.post('/api/yield', (req, res) => {
     res.json({ totalYield });
 });
 
-// ── Start server ──
+// Start server
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
