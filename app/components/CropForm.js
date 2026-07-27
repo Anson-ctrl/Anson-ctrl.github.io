@@ -12,7 +12,7 @@ export default function CropForm({ onCropAdded }) {
         setError('');
 
         try {
-            const res = await fetch('http://localhost:3001/api/crops', {
+            const res = await fetch('/api/crops', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ name, growth })

@@ -11,7 +11,7 @@ export default function YieldForm({ onYieldLogged }) {
         setError('');
 
         try {
-            const res = await fetch('http://localhost:3001/api/yield', {
+            const res = await fetch('/api/yield', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ amount: parseFloat(amount) })
